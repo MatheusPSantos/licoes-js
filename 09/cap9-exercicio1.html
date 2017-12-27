@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 1</title>
+    </head>
+    <script type="text/javascript">
+        var frutas = ["maçã", "morango", "banana", "melão", "mamão"];
+
+        frutas.pop();
+        frutas.pop();
+        document.write(frutas);
+
+        document.write("<br>")
+
+        frutas.sort();
+        document.write(frutas);
+
+        document.write("<br>");
+
+        frutas.splice(2, 0, "caju", "uva", "pêra");
+        document.write(frutas);
+
+        document.write("<br>");
+
+        var i;
+        for(i = 0; i < frutas.length; i++) {
+            document.write("<p>"+frutas[i]+"</p>");
+        }
+
+
+    </script>
+</html>

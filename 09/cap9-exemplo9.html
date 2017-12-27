@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Exemplo 9</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p>Sera retornado uma string com os elementos separados por vírgula.</p>
+        <button onclick="marcas()">Clique no botão</button>
+        <p id="resultado"></p>
+
+        <script type="text/javascript">
+            var motocicletas = ["Honda", "Yamaha", "Suzuki", "Ducaty", "Harley-Davidson"];
+            document.getElementById("resultado").innerHTML = motocicletas;
+
+            function marcas() {
+                if(motocicletas.length > 0) {
+                    motocicletas.pop();
+                    document.getElementById("resultado").innerHTML = motocicletas;
+                }else{
+                    document.getElementById("resultado").innerHTML = "vazio";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Exemplo 8</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button onclick="marcas()">Clique no botão</button>
+
+        <p id="Resultado"></p>
+
+        <script type="text/javascript">
+            var motocicletas = ["Honda", "Yamaha", "Suzuki", "Harley-Davidson", "Ducaty"];
+            document.getElementById("Resultado").innerHTML = motocicletas;
+
+            function marcas() {
+                motocicletas.pop();
+                document.getElementById("Resultado").innerHTML = motocicletas;
+            }
+        </script>
+    </body>
+</html>

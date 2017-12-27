@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício</title>
+    </head>
+    <body>
+        <script>
+            var codProd;
+            var total = 0;
+            do {
+                codProd = prompt("Informe o Código do Produto");
+                console.log(codProd);
+                if(codProd < 1) {
+                    document.write("Compra cancelada, código inválido.")
+                    break;
+                }
+                else if(codProd == 1)
+                    total += 6,25;
+                else if(codProd == 2)
+                    total += 6,75;
+                else if(codProd == 3)
+                    total += 10,75;
+                else if(codProd == 4)
+                    total += 11,75;
+                else if(codProd == 5)
+                    total += 13,50;
+                else {
+                    document.write("Código deve ser no máximo 5 e no mínimo 1<br>Compra cancelada.");
+                    break;
+                }
+                if(codProd == null) {
+                    document.write("Compra Cancelada.");
+                }
+
+            } while(codProd != null);
+
+            document.write("<h2>Valor total do Pedido</h2> <br>");
+            document.write("<span> R$ "+total+"</span><br>");
+        </script>
+    </body>
+</html>

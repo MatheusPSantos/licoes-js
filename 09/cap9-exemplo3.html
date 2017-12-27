@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Exemplo 3</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <style>
+            .oi {
+                background-color: rgb(11, 123, 252);
+                color: white;
+                width: 200px;
+                height: 30px;
+                margin: 1px;
+                padding: 2px;
+                text-align: center;
+                cursor: pointer;
+                transition: ease 0.5s;
+            }
+            .oi:hover {
+                background-color: rgba(6, 184, 48, 0.774);
+                box-shadow: 2px 2px 4px rgba(24, 2, 2, 0.363);
+            }
+        </style>
+        <script type="text/javascript">
+            var motocicleta = ["Honda", "Yamaha", "Ducaty", "Harley-Davidson", "Kawasaki", "Suzuki", "Piaggio"];
+            var x;
+            for(x = 0; x < motocicleta.length; x++) {
+                document.write("<p class='oi'>" + motocicleta[x] + "</p><br>");
+            }
+        </script>
+    </body>
+</html>
