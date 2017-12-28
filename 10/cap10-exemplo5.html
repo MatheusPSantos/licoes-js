@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplo 5</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var pessoa = {};
+
+        function Endereco(cidade, estado, endereco) {
+            this.cidade = cidade;
+            this.estado = estado;
+            this.endereco = endereco;
+        }
+
+        pessoa["Matheus"] = new Endereco("Londrina", "Paraná", "Universitario 1234");
+        pessoa["Beltrano"] = new Endereco("Curitiba", "Paraná", "Av. Sete de Setembro");
+
+        for(var element in pessoa) {
+            for(var propt in pessoa[element]) {
+                document.write(element + ": "+propt+" = "+pessoa[element][propt]+"<br>");
+            }
+        }
+    </script>
+</body>
+</html>

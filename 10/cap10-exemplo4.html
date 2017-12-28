@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exemplo 4</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function Pessoa(nome, sobrenome, idade, altura) {
+                this.nome = nome;
+                this.sobrenome = sobrenome;
+                this.idade = idade;
+                this.altura = altura;
+            }
+
+            var eu = new Pessoa("Matheus", "Pereira dos Santos", "20", "1.67");
+
+            document.write(eu.nome +", "+ eu.sobrenome +", "+ eu.idade +" anos, "+ eu.altura+" m.");
+        </script>
+    </body>
+</html>

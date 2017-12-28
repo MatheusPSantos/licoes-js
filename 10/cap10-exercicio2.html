@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var aluno = {};
+
+        function Curso(nome, disciplinas, anos) {
+            this.nome = nome;
+            this.disciplinas = disciplinas;
+            this.anos = anos;
+        }
+
+        aluno["Matheus"] = new Curso("Eng. Comp", "Cálculo iv, Cáluclo iii, Matemática Discreta, Banco de Dados", "5");
+        aluno["Martines"] = new Curso("Eng. Comp", "Cálculo iv, Cáluclo iii, Matemática Discreta, Banco de Dados", "5");
+        for(element in aluno){
+            for(propt in aluno[element]) {
+                document.write(element + ": "+propt+" = "+aluno[element][propt]+"<br>");
+            }
+        }
+    </script>
+</body>
+</html>

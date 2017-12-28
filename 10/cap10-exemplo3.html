@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exemplo 3</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var motocicletas = {
+                marca: "Harley-Davidson",
+                nome: "XL883N Iron 883",
+                cor: "preta",
+
+                showDetalhes: function() {
+                    return (alert(this.marca+" "+this.nome));
+                },
+
+                showNome: function() {
+                    return alert(this.nome);
+                },
+
+                showCaracteristicas: function() {
+                    return alert(this.cor);
+                }
+            };
+
+            motocicletas.showDetalhes();
+            motocicletas.showNome();
+            motocicletas.showCaracteristicas();
+        </script>
+    </body>
+</html>

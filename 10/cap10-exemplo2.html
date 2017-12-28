@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exemplo 2</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var motocicletas = {
+                marca: "Harley-Davidson",
+                nome: "XL883N Iron 883",
+                cor: "preta",
+
+                getDetalhe: function() {
+                    return this.marca + " " + this.nome;
+                }
+            };
+
+            document.write(motocicletas.getDetalhe());
+        </script>
+    </body>
+</html>
