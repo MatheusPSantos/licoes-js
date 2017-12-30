@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplo 6</title>
+</head>
+<body>
+    <button onclick="novaPagina()">Nova Página</button>
+    <button onclick="recarregar()">Recarregar Página</button>
+    <button onclick="substituirPagina()">Substituir Página</button>
+    <script type="text/javascript">
+        function novaPagina() {
+            location.assign("Http://github.com");
+        }
+        function recarregar() {
+            location.reload();
+        }
+        function substituirPagina() {
+            location.replace("http://github.com/unectjr");
+        }
+    </script>
+</body>
+</html>
