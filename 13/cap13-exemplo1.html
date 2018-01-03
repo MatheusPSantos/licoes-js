@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cap13-estilo.css">
+    <title>Exemplo 1</title>
+</head>
+<body>
+    <p class="exemplo">Posicione o mouse sobre o botão.</p>
+    <button onmouseover="mudarCor(this)" onmouseout="normalCor(this)">Posicione Aqui</button>
+    <script>
+        function mudarCor(x) {
+            x.style.backgroundColor = "red";
+            x.style.color = "white";
+        }
+        function normalCor(x) {
+            x.style.backgroundColor = "#ddd";
+            x.style.color = "black";
+        }
+    </script>
+</body>
+</html>

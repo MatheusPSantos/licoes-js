@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cap13-estilo.css">
+    <title>Exemplo 3</title>
+</head>
+<body>
+    <div id="area">
+        <p>mousemove: <br> <span id="resultado">Movimento do mouse!</span></p>
+    </div>
+
+    <script>
+        var area = document.getElementById("area");
+
+        // verificação para todos os navegadores
+        if (area.attachEvent) {
+            area.attachEvent("onmousemove", moveMouse);
+        } else if (area.addEventListener) {
+            area.addEventListener("mousemove", moveMouse, true);
+        }
+
+        function moveMouse(evento) {
+            var x = evento.x,
+            y = evento.y;
+
+
+            document.getElementById("resultado").innerHTML = "x: "+x+" y: "+y;
+        }
+    </script>
+</body>
+</html>
