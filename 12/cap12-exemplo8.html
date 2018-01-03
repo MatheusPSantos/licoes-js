@@ -26,11 +26,10 @@
             var list = document.getElementById("city");
             var el = list.getElementsByTagName("li");
             var txt = document.getElementById("txt-city").value;
-            var content = document.createTextNode(txt);
             var x;
             for(x = 0; x < el.length; x++) {
-                if(content == el[x].value) {
-                    list.removeChild(list.childNodes[x]);
+                if(txt == el[x].innerText) {
+                    el[x].outerHTML = '';
                 }
             }
         }
