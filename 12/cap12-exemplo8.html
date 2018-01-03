@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplo 8</title>
+</head>
+<body>
+    <h1>Lista de cidades visitadas.</h1>
+    <ul id="city"></ul>
+    <p>Adicionar ou remover uma cidade da lista de cidades a serem visitadas.</p>
+    <input type="text" name="txt-city" id="txt-city">
+    <button onclick="addCity()">Adicionar Cidade</button>
+    <button onclick="removeCity()">Remover cidade</button>
+    <script>
+        function addCity() {
+            var nameCity = document.getElementById("txt-city").value;
+            var newList = document.createElement("li");
+            var contentText = document.createTextNode(nameCity);
+            newList.appendChild(contentText);
+            document.getElementById("city").appendChild(newList);
+        }
+
+        function removeCity() {
+            var list = document.getElementById("city");
+            var el = list.getElementsByTagName("li");
+            var txt = document.getElementById("txt-city").value;
+            var content = document.createTextNode(txt);
+            var x;
+            for(x = 0; x < el.length; x++) {
+                if(content == el[x].value) {
+                    list.removeChild(list.childNodes[x]);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+
