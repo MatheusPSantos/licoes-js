@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplo 4</title>
+    <link rel="stylesheet" href="cap13-estilo.css">
+</head>
+<body>
+    <p>Clique no botão para remover o evento.</p>
+    <button id="meuBotao">Clique aqui</button>
+    <div id="area">
+        <p>mousemove: <br> <span id="resultado">Movimento o mouse!</span></p>
+    </div>
+    <script>
+        var area = document.getElementById("area");
+        var botao = document.getElementById("meuBotao");
+
+        if (area.attachEvent) {
+            area.attachEvent("onmousemove", moveMouse);
+            botao.detacheEvent("click", removeEvento);
+        } else if (area.addEventListener) {
+            area.addEventListener("mousemove", moveMouse, true);
+            botao.addEventListener("click", removeEvento);
+        }
+
+        function moveMouse(evento) {
+            var x = evento.x, y = evento.y;
+            document.getElementById("resultado").innerHTML = "x: "+ x +"<br>y: " + y;
+        }
+
+        function removeEvento() {
+            area.removeEventListener("mousemove", moveMouse, true);
+        }
+    </script>
+</body>
+</html>
